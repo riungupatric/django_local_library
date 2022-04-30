@@ -1,0 +1,13 @@
+{% extends 'base_generic.html' %}
+{#Author update and create models expected a model named mode_form(author_form)#}
+{#the form suffix can be change by providing a diff suffix: #}
+{# in the views, add template_name_sufffix= template_name_other#}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="submit">
+</form>
+{% endblock %}
